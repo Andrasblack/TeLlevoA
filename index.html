@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportes seguros</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <p class="logo">Transportes seguro</p>
+            <nav>
+                <a href="#">Sobre la app</a>
+                <a href="#">Comentarios</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero (Promocional) -->
+    <section id="hero">
+        <h1>Solicita tus viajes seguros<br>Con nuestra app</h1>
+        <button id="viajarAhoraButton">PIDE TU VIAJE AHORA</button>
+    </section>
+
+    <!-- Sección para hacer un viaje -->
+    <section id="realizarunviaje">
+        <h2>¿Lista para hacer un viaje?</h2>
+        <button id="viajarAhoraButton">Viajar ahora</button>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <p>&copy; Viajes seguros 2024</p>
+        </div>
+    </footer>
+
+    <!-- Script para manejar el botón de descarga de APK -->
+    <script>
+        // Selecciona el botón "Viajar ahora" por su ID
+        const viajarAhoraButton = document.getElementById('viajarAhoraButton');
+        
+        // Enlace directo a la APK
+        const apkLink = "https://drive.google.com/uc?export=download&id=11_HVbEq_Bc52m9Hd1qS5lBMpqO_M_1xm"; // Sustituye con tu enlace de Google Drive
+
+        // Añade un evento para descargar la APK cuando el botón sea presionado
+        viajarAhoraButton.addEventListener('click', () => {
+            // Crea un enlace de descarga y simula un clic
+            const downloadLink = document.createElement('a');
+            downloadLink.href = apkLink;
+            downloadLink.download = "app.apk"; // Nombre del archivo descargado
+
+            // Simula un clic para iniciar la descarga
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+
+            // Limpia el enlace creado
+            document.body.removeChild(downloadLink);
+        });
+    </script>
+</body>
+</html>
